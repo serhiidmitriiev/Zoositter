@@ -1,0 +1,14 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: grey;
+}
+
+.copyright {
+  font-size: 16px;
+}
