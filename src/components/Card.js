@@ -1,4 +1,5 @@
 import React from "react";
+import image from "../assets/People.svg.png";
 
 import styles from "../styles/Card.module.css";
 
@@ -6,6 +7,11 @@ function Card({ email, first_name, last_name, gender, id, status }) {
   return (
     <div className={styles.card} key={id}>
       <div className={styles.info}>
+        <img
+          src={image}
+          alt="image"
+          style={{ height: "100px", width: "100px" }}
+        />
         <h1>
           {first_name} {last_name}
         </h1>

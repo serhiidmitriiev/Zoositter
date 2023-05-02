@@ -10,6 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 40%;
   border: solid 1px aqua;
   border-radius: 10px;
   padding: 10px;
