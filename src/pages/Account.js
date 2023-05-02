@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Layout from "../components/Layout";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import styles from "../styles/Form.module.css";
+import store from "../app/store";
+import { sitterAdded } from "../app/sitters/reducer";
 
 function Account() {
   const [fname, setFname] = useState("");
@@ -32,7 +34,18 @@ function Account() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(store.getState());
     console.log(fname, lname, pet, quantity);
+    store.dispatch(
+      sitterAdded({
+        first_name: fname,
+        last_name: lname,
+        pet: pet,
+        quantity: quantity,
+        dateFrom: dateFrom,
+        dateTo: dateTo,
+      })
+    );
     setLname("");
     setFname("");
     setPet("");

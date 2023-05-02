@@ -1,15 +1,19 @@
 import React from "react";
 import logo from "./logo.svg";
 import styles from "../styles/Navbar.module.css";
+import { useLocation } from "react-router-dom";
 
 function Navbar() {
+  const location = useLocation();
   return (
     <nav className={styles.nav}>
       <img src={logo} alt="logo" className={styles.logo} />
       <div className={styles.links_container}>
-        <a href="/" className={styles.links}>
-          Home
-        </a>
+        {location.pathname !== "/" && (
+          <a href="/" className={styles.links}>
+            Home
+          </a>
+        )}
 
         <a href="/sitters" className={styles.links}>
           Sitters
