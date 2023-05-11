@@ -46,6 +46,7 @@ function Account() {
         dateTo: dateTo,
       })
     );
+    console.log("my store", store.getState());
     setLname("");
     setFname("");
     setPet("");

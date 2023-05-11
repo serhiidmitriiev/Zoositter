@@ -9,7 +9,7 @@ function Card({ email, first_name, last_name, gender, id, status }) {
       <div className={styles.info}>
         <img
           src={image}
-          alt="image"
+          alt="customer"
           style={{ height: "100px", width: "100px" }}
         />
         <h1>

@@ -23,6 +23,22 @@
       "email": "htoto@gmail.com",
       "gender": "unknown",
       "status": "passive"
+    },
+    {
+      "id": 4,
+      "first_name": "This",
+      "last_name": "Guy",
+      "email": "this@gmail.com",
+      "gender": "male",
+      "status": "active"
+    },
+    {
+      "id": 5,
+      "first_name": "That",
+      "last_name": "Guy",
+      "email": "that@gmail.com",
+      "gender": "male",
+      "status": "passive"
     }
   ]
 }
