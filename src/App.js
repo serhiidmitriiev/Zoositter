@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Account from "./pages/Account";
 import "./App.css";
 import useToken from "./useToken";
+import Users from "./pages/Users";
 
 // import { useState } from "react";
 
@@ -36,6 +37,7 @@ function App() {
         <Route path="/news" element={<News />} />
         <Route path="/login" element={<Login />} />
         <Route path="/account" element={<Account />} />
+        <Route path="/account/:id" element={<Users />} />
       </Routes>
     </BrowserRouter>
   );

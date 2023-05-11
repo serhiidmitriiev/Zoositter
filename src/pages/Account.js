@@ -4,6 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import styles from "../styles/Form.module.css";
 import store from "../app/store";
 import { sitterAdded } from "../app/sitters/reducer";
+import { useNavigate } from "react-router-dom";
 
 function Account() {
   const [fname, setFname] = useState("");
@@ -12,6 +13,8 @@ function Account() {
   const [quantity, setQuantity] = useState(1);
   const [dateFrom, setDateFrom] = useState("2023-01-01");
   const [dateTo, setDateTo] = useState("2023-02-03");
+
+  const navigate = useNavigate();
 
   const fNameHandler = (e) => {
     setFname(e.target.value);
@@ -34,8 +37,6 @@ function Account() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(store.getState());
-    console.log(fname, lname, pet, quantity);
     store.dispatch(
       sitterAdded({
         first_name: fname,
@@ -46,7 +47,9 @@ function Account() {
         dateTo: dateTo,
       })
     );
+
     console.log("my store", store.getState());
+    navigate(`/account/${fname}_${lname}`);
     setLname("");
     setFname("");
     setPet("");
