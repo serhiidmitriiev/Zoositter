@@ -28,7 +28,7 @@ function Home() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3500/sitters")
+    fetch("http://localhost:3000/sitters")
       .then((res) => res.json())
       .then((data) => setInfo(data))
       .catch((err) => console.log(err));

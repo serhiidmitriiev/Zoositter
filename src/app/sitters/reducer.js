@@ -16,6 +16,12 @@ const slice = createSlice({
         dateTo: action.payload.dateTo,
       });
     },
+    // sitterEdited: (sitter, action) => {
+    //   let edited = sitter.find((user) => user.id === sitter.id);
+    //   sitter.push({
+
+    //   })
+    // },
   },
 });
 

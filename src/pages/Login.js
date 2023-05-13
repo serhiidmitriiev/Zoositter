@@ -5,7 +5,7 @@ import styles from "../styles/Form.module.css";
 import PropTypes from "prop-types";
 
 async function loginUser(credentials) {
-  return fetch("http://localhost:8080/login", {
+  return fetch("http://localhost:3000/login", {
     method: "POST",
     header: {
       "Content-type": "application/json",
