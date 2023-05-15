@@ -3,7 +3,16 @@ import image from "../assets/People.svg.png";
 
 import styles from "../styles/Card.module.css";
 
-function Card({ email, first_name, last_name, gender, id, status }) {
+function CardOwners({
+  email,
+  first_name,
+  last_name,
+  pet,
+  quantity,
+  dateFrom,
+  dateTo,
+  id,
+}) {
   return (
     <div className={styles.card} key={id}>
       <div className={styles.info}>
@@ -15,12 +24,14 @@ function Card({ email, first_name, last_name, gender, id, status }) {
         <h1>
           {first_name} {last_name}
         </h1>
-        <h2>{gender}</h2>
-        <h3>{status}</h3>
+        <h2>{pet}</h2>
+        <h2>{quantity}</h2>
+        <h3>{dateFrom}</h3>
+        <h3>{dateTo}</h3>
         <h4>{email}</h4>
       </div>
     </div>
   );
 }
 
-export default Card;
+export default CardOwners;

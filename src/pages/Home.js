@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
-import Card from "../components/Card";
+import CardSitters from "../components/CardSitters";
 import styles from "../styles/Home.module.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -59,7 +59,7 @@ function Home() {
           itemClass="carousel-item-padding-40-px"
         >
           {info.map((sitter) => (
-            <Card
+            <CardSitters
               key={sitter.id}
               first_name={sitter.first_name}
               last_name={sitter.last_name}
